@@ -13,6 +13,7 @@
                     <StackLayout Orientation="Horizontal">
                         <Label VerticalOptions="CenterAndExpand" Text="Productivity OB Loader (PYT)" WidthRequest="200"></Label>
                         <Entry HorizontalOptions="EndAndExpand" Text="{Binding Model.PTY}" HorizontalTextAlignment="End" WidthRequest="100" Keyboard="Numeric" MaxLength="100"></Entry>
+                        <Label VerticalOptions="CenterAndExpand"  Text="%" HorizontalOptions="End"></Label>
                     </StackLayout>
                     <Label HorizontalOptions="EndAndExpand" Text="{Binding Model.PTYResult}"></Label>
                 </StackLayout>
@@ -22,6 +23,7 @@
                     <StackLayout Orientation="Horizontal">
                         <Label VerticalOptions="CenterAndExpand" Text="Pa Main Equipment (PA)" WidthRequest="200"></Label>
                         <Entry HorizontalOptions="EndAndExpand" Text="{Binding Model.PA}" HorizontalTextAlignment="End" WidthRequest="100" Keyboard="Numeric" MaxLength="100"></Entry>
+                        <Label VerticalOptions="CenterAndExpand"  Text="%" HorizontalOptions="End"></Label>
                     </StackLayout>
                     <Label HorizontalOptions="EndAndExpand" Text="{Binding Model.PAResult}"></Label>
                 </StackLayout>
@@ -32,6 +34,7 @@
                     <StackLayout Orientation="Horizontal">
                         <Label VerticalOptions="CenterAndExpand" Text="Achievement Production (AP)" WidthRequest="200"></Label>
                         <Entry HorizontalOptions="EndAndExpand" Text="{Binding Model.AP}" HorizontalTextAlignment="End" WidthRequest="100" Keyboard="Numeric" MaxLength="100"></Entry>
+                        <Label VerticalOptions="CenterAndExpand"  Text="%" HorizontalOptions="End"></Label>
                     </StackLayout>
                     <Label HorizontalOptions="EndAndExpand" Text="{Binding Model.APResult}"></Label>
                 </StackLayout>
