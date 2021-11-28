@@ -26,7 +26,6 @@ namespace PerhitunganBonus
             return 1.2;
         }
 
-
         internal static double CalculateAP(double value)
         {
             if (value < 97)
