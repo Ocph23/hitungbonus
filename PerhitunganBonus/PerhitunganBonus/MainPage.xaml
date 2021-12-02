@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PerhitunganBonus.MainPage">
-
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Perhitungan Bonus !" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <StackLayout Margin="10">
-            <Frame Padding="20,5">
-                <StackLayout>
+             x:Class="PerhitunganBonus.MainPage" BackgroundColor="Silver">
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="20" CornerRadius="0">
+                <Label Text="Perhitungan Bonus !" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <StackLayout Margin="5">
+                <StackLayout BackgroundColor="WhiteSmoke" Padding="20,8">
                     <StackLayout Orientation="Horizontal">
                         <Label VerticalOptions="CenterAndExpand" Text="Productivity OB Loader (PYT)" WidthRequest="200"></Label>
                         <Entry HorizontalOptions="EndAndExpand" Text="{Binding Model.PTY}" HorizontalTextAlignment="End" WidthRequest="100" Keyboard="Numeric" MaxLength="100"></Entry>
@@ -17,9 +16,7 @@
                     </StackLayout>
                     <Label HorizontalOptions="EndAndExpand" Text="{Binding Model.PTYResult}"></Label>
                 </StackLayout>
-            </Frame>
-            <Frame Padding="20,5">
-                <StackLayout>
+                <StackLayout BackgroundColor="WhiteSmoke" Padding="20,8">
                     <StackLayout Orientation="Horizontal">
                         <Label VerticalOptions="CenterAndExpand" Text="Pa Main Equipment (PA)" WidthRequest="200"></Label>
                         <Entry HorizontalOptions="EndAndExpand" Text="{Binding Model.PA}" HorizontalTextAlignment="End" WidthRequest="100" Keyboard="Numeric" MaxLength="100"></Entry>
@@ -27,10 +24,8 @@
                     </StackLayout>
                     <Label HorizontalOptions="EndAndExpand" Text="{Binding Model.PAResult}"></Label>
                 </StackLayout>
-            </Frame >
 
-            <Frame Padding="20,5">
-                <StackLayout>
+                <StackLayout BackgroundColor="WhiteSmoke" Padding="20,8">
                     <StackLayout Orientation="Horizontal">
                         <Label VerticalOptions="CenterAndExpand" Text="Achievement Production (AP)" WidthRequest="200"></Label>
                         <Entry HorizontalOptions="EndAndExpand" Text="{Binding Model.AP}" HorizontalTextAlignment="End" WidthRequest="100" Keyboard="Numeric" MaxLength="100"></Entry>
@@ -38,49 +33,42 @@
                     </StackLayout>
                     <Label HorizontalOptions="EndAndExpand" Text="{Binding Model.APResult}"></Label>
                 </StackLayout>
-            </Frame>
 
-            <Frame Padding="20,5">
-                <StackLayout>
+                <StackLayout BackgroundColor="WhiteSmoke" Padding="20,8">
                     <StackLayout Orientation="Horizontal">
                         <Label VerticalOptions="CenterAndExpand" Text="Faktor Insiden (FI)" WidthRequest="150"></Label>
                         <Picker ItemsSource="{Binding FISource}" HorizontalOptions="EndAndExpand" SelectedItem="{Binding Model.FIType}" HorizontalTextAlignment="End" WidthRequest="150" ></Picker>
                     </StackLayout>
                     <Label HorizontalOptions="EndAndExpand" Text="{Binding Model.FIResult}"></Label>
                 </StackLayout>
-            </Frame>
 
-            <Frame Padding="20,5">
-                <StackLayout>
+                <StackLayout BackgroundColor="WhiteSmoke" Padding="20,8">
                     <StackLayout Orientation="Horizontal">
                         <Label VerticalOptions="CenterAndExpand" Text="Jumlah Kehadiran" WidthRequest="200"></Label>
                         <Entry HorizontalOptions="EndAndExpand" Text="{Binding Model.Kehadiran}" HorizontalTextAlignment="End" WidthRequest="100" Keyboard="Numeric" MaxLength="100"></Entry>
                     </StackLayout>
                 </StackLayout>
-            </Frame>
 
-            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <StackLayout >
-                        <Label TextColor="White" Text="Constant Value"/>
-                        <Label TextColor="White" Text="Nilai Kehadiran"/>
-                        <Label TextColor="White" Text="Total Pendapatan"/>
-                    </StackLayout>
-                    <StackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
-                        <Label TextColor="White" Text="Rp. 25.000"/>
-                        <Label TextColor="White" Text="Rp. 10.000"/>
-                        <Label TextColor="White" Text="{Binding Model.Total, StringFormat='Rp. {0:N}'}"/>
-                    </StackLayout>
-                </Grid>
-            </Frame>
+                <Frame BackgroundColor="#2196F3" Padding="20" CornerRadius="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout >
+                            <Label TextColor="White" Text="Constant Value"/>
+                            <Label TextColor="White" Text="Nilai Kehadiran"/>
+                            <Label TextColor="White" Text="Total Pendapatan"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+                            <Label TextColor="White" Text="Rp. 25.000"/>
+                            <Label TextColor="White" Text="Rp. 10.000"/>
+                            <Label TextColor="White" Text="{Binding Model.Total, StringFormat='Rp. {0:N}'}"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
 
-        </StackLayout>        
-        
-       
-    </StackLayout>
-
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
